@@ -2,11 +2,26 @@
 import React from "react";
 
 const EventExample = () => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  };
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log("Clicked Searched Button!!!");
+  };
+  const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: number) => {
+    e.preventDefault();
+    console.log("Post deleted!");
+  };
   return (
     <div className="eventExample">
       <form>
-        <input type="text" placeholder="Search for anything..." />
-        <button>Search</button>
+        <input
+          type="text"
+          placeholder="Search for anything..."
+          onChange={handleChange}
+        />
+        <button onClick={handleClick}>Search</button>
       </form>
       <form className="post">
         <h1>Lorem ipsum dolor sit amet consectetur 1</h1>
@@ -16,7 +31,7 @@ const EventExample = () => {
           harum neque itaque, eum reprehenderit non repellendus? Assumenda
           necessitatibus distinctio veniam eveniet.
         </p>
-        <button>Delete</button>
+        <button onClick={(e) => handleDelete(e, 1)}>Delete</button>
       </form>
       <form className="post">
         <h1>Lorem ipsum dolor sit amet consectetur 2</h1>
@@ -26,7 +41,7 @@ const EventExample = () => {
           harum neque itaque, eum reprehenderit non repellendus? Assumenda
           necessitatibus distinctio veniam eveniet.
         </p>
-        <button>Delete</button>
+        <button onClick={(e) => handleDelete(e, 2)}>Delete</button>
       </form>
     </div>
   );
