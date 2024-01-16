@@ -4,7 +4,8 @@ import Shape from "./Shape";
 const ShapeList = () => {
   return (
     <div>
-      <Shape color="light-yellow" />
+      <Shape color="dark-blue" />
+      {/* we will see all the color options here */}
     </div>
   );
 };
