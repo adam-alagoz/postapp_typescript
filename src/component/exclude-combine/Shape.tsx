@@ -14,7 +14,8 @@ type ItemProps = {
 const Shape = (props: ItemProps) => {
   const shape: ShapeType = "cube";
   const twoDShape: TwoDShapeType = "square";
-
+  //   // const shape:ShapeType=// all the options will pop up. "cube" | "square" | "rectangle" | "triangle";
+  //   //  const another:TwoDShapeType=//Only removed the 'cube' and others will pop up.
   return <div>Shape</div>;
 };
 
