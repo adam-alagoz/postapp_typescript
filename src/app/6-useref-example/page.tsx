@@ -8,7 +8,7 @@ const UseRefExample = () => {
     inputRef.current?.focus();
   }, []);
   const handleClick = () => {
-    console.log(`username is ${inputRef.current?.value}`);
+    console.log(`Username is ${inputRef.current?.value}`);
   };
   return (
     <div className="useRefExample">
